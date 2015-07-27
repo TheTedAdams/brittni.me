@@ -34,10 +34,18 @@ label {
 	margin: 0 -10px;
 	display: block;
 	transition: all .3s;
+	position: relative;
 }
 	label:hover {
 		background-color: rgba(75,75,75,.05);
 	}
+	label::after {
+		position: absolute;
+		right: 10px;
+		font-family: "FontAwesome";
+		content: "\f13a";
+	}
+	input:checked ~ label::after { content: "\f139"; }
 
 .sample {
 	display: none;
